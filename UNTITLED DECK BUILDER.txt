@@ -1,0 +1,16 @@
+UNTITLED DECK BUILDER
+
+CONST VARIABLES:
+PackSize = 6
+[0-1 General, 0-1 Utility/Non-card, 4-6 Cards]
+
+Game flow:
+START -> open pack, guaranteed 1 general, 5 cards; auto-take all
+BEGIN LOOP
+(NTH) Pick between two different opponents/1 opponent or 1 challenge
+Player selects General (auto-pick if only one option)
+Player always gets second turn
+	
+WIN -> LOOP
+LOSE -> Remove general from list, deck remains the same
+IF last general, end game
