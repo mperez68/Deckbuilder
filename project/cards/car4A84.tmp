@@ -1,0 +1,19 @@
+[
+	{
+		"name":"Default",
+		"cost":0,
+		"text":"DEFAULT TEXT"
+	},
+	{
+		"name": "Goblin",
+		"cost":2,
+		"text":"Just a little guy",
+		"power":1,
+		"health":1
+	},
+	{
+		"name": "Magic Missile",
+		"cost":1,
+		"text":"Deal 1 damage to any target"
+	}
+]

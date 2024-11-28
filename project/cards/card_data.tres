@@ -1,0 +1,13 @@
+[gd_resource type="JSON" format=3 uid="uid://krbrq64gl21y"]
+
+[resource]
+data = [{
+"index": 0.0,
+"name": "Default"
+}, {
+"index": 1.0,
+"name": "Goblin"
+}, {
+"index": 2.0,
+"name": "Magic Missile"
+}]
