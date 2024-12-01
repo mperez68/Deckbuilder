@@ -1,8 +1,8 @@
 [
 	{
-		"name": "Default",
+		"name": "UNDEFINED",
 		"cost": 0,
-		"text": "DEFAULT TEXT"
+		"text": "UNDEFINED"
 	},
 	{
 		"name": "Goblin",
@@ -14,6 +14,10 @@
 	{
 		"name": "Magic Missile",
 		"cost": 1,
-		"text": "Deal 1 damage to any target"
+		"text": "Deal 1 damage to any target",
+		"targets": [
+			0
+		],
+		"effect": "DAMAGE"
 	}
 ]

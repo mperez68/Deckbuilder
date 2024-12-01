@@ -1,16 +1,66 @@
-[gd_scene load_steps=2 format=3 uid="uid://djsn3jicqsq21"]
+[gd_scene load_steps=9 format=3 uid="uid://djsn3jicqsq21"]
 
-[ext_resource type="PackedScene" uid="uid://bkifv0esuct4w" path="res://cards/card.tscn" id="1_p7qx1"]
+[ext_resource type="PackedScene" uid="uid://br8vtix2d4qli" path="res://cards/deck.tscn" id="1_lexhh"]
+[ext_resource type="PackedScene" uid="uid://b7fi7jy53tno1" path="res://cards/discard.tscn" id="2_woaxg"]
+[ext_resource type="PackedScene" uid="uid://y8xsrvk7tv05" path="res://cards/hand.tscn" id="3_1ulst"]
+
+[sub_resource type="Gradient" id="Gradient_pkqcb"]
+colors = PackedColorArray(0.894922, 0.894922, 0.894922, 1, 0.0807833, 0.0807833, 0.0807833, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_cf3n8"]
+gradient = SubResource("Gradient_pkqcb")
+width = 512
+height = 384
+fill_to = Vector2(1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7vneg"]
+gradient = SubResource("Gradient_pkqcb")
+width = 512
+height = 384
+fill_from = Vector2(0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ph57j"]
+gradient = SubResource("Gradient_pkqcb")
+width = 512
+height = 384
+fill_from = Vector2(1, 1)
+fill_to = Vector2(0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ofgmq"]
+gradient = SubResource("Gradient_pkqcb")
+width = 512
+height = 384
+fill_from = Vector2(1, 0)
+fill_to = Vector2(0, 1)
 
 [node name="Level" type="Node2D"]
 
-[node name="Card" parent="." instance=ExtResource("1_p7qx1")]
-position = Vector2(389, 527)
-card_name = 1
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(256, 192)
+texture = SubResource("GradientTexture2D_cf3n8")
 
-[node name="Card2" parent="." instance=ExtResource("1_p7qx1")]
-position = Vector2(489, 526)
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(768, 192)
+texture = SubResource("GradientTexture2D_7vneg")
 
-[node name="Card3" parent="." instance=ExtResource("1_p7qx1")]
-position = Vector2(601, 530)
-card_name = 2
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(768, 576)
+texture = SubResource("GradientTexture2D_ph57j")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(256, 576)
+texture = SubResource("GradientTexture2D_ofgmq")
+
+[node name="Deck" parent="." node_paths=PackedStringArray("discard") instance=ExtResource("1_lexhh")]
+position = Vector2(93, 676)
+discard = NodePath("../Discard")
+custom_scale = 1.4
+
+[node name="Discard" parent="." instance=ExtResource("2_woaxg")]
+position = Vector2(946, 682)
+custom_scale = 1.4
+
+[node name="Hand" parent="." node_paths=PackedStringArray("deck") instance=ExtResource("3_1ulst")]
+position = Vector2(512, 672)
+deck = NodePath("../Deck")
+custom_scale = 1.6

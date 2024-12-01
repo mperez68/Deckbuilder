@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://b7fi7jy53tno1"]
+
+[ext_resource type="Script" path="res://cards/discard.gd" id="1_150k1"]
+[ext_resource type="Texture2D" uid="uid://db152iavr1arq" path="res://assets/graphics/box.jpg" id="2_rh1yp"]
+[ext_resource type="Texture2D" uid="uid://qt7m3rovlwva" path="res://assets/graphics/boxarrow.jpg" id="2_xoc8n"]
+
+[node name="Discard" type="Node2D"]
+script = ExtResource("1_150k1")
+
+[node name="Outer" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 0.537255, 1)
+position = Vector2(0, -0.544933)
+scale = Vector2(1.05, 1.428)
+texture = ExtResource("2_rh1yp")
+
+[node name="Inner" type="Sprite2D" parent="."]
+modulate = Color(0.452865, 0, 0.064916, 1)
+rotation = 3.14159
+scale = Vector2(1, 1.36)
+texture = ExtResource("2_xoc8n")

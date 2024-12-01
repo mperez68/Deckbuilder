@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://br8vtix2d4qli"]
+
+[ext_resource type="Script" path="res://cards/deck.gd" id="1_ynh54"]
+[ext_resource type="Texture2D" uid="uid://db152iavr1arq" path="res://assets/graphics/box.jpg" id="2_1bvi4"]
+[ext_resource type="Texture2D" uid="uid://qt7m3rovlwva" path="res://assets/graphics/boxarrow.jpg" id="2_ewb0e"]
+
+[node name="Deck" type="Node2D"]
+script = ExtResource("1_ynh54")
+
+[node name="Outer" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 0.537255, 1)
+position = Vector2(0, -0.544933)
+scale = Vector2(1.05, 1.428)
+texture = ExtResource("2_1bvi4")
+
+[node name="Inner" type="Sprite2D" parent="."]
+modulate = Color(0.00187383, 0.225311, 0.834802, 1)
+scale = Vector2(1, 1.36)
+texture = ExtResource("2_ewb0e")
